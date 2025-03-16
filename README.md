@@ -50,9 +50,9 @@ Expected Results:
 
   The output of the simulation will show performance metrics for each algorithm, including:
   
-    o	Average Waiting Time (WT)
+    1.	Average Waiting Time (WT)
     
-    o	Average Turnaround Time (TAT)
+    2.	Average Turnaround Time (TAT)
     
   The results will allow you to determine which algorithm performs best in terms of minimizing waiting time, reducing turnaround time.
 
