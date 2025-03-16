@@ -78,7 +78,7 @@ class Task
         }
         void FIFO(int n)
         {
-            cout<<"First In First Out Scheduling Algorithm "<<endl;
+            cout<<"First Come First Serve Scheduling Algorithm "<<endl;
             HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
             SetConsoleTextAttribute(hConsole, 2);
             int sum1=0,sum2=0;
@@ -97,11 +97,14 @@ class Task
                 waiting_time[i]=turn_around_time[i]-burst_time[i];
                 sum2+=waiting_time[i];
             }
-            cout<<setw(10)<<"T"<<setw(10)<<"|"<<setw(10)<<"AT"<<setw(10)<<"|"<<setw(10)<<"BT"<<setw(10)<<"|"<<setw(10)<<"CT"<<setw(10)<<"|"<<setw(10)<<"TAT"<<setw(10)<<"|"<<setw(10)<<"WT"<<setw(10)<<endl;
+            cout<<"-------------------------------------------------------------------------------------------------------------------------"<<endl;
+            cout<<"|"<<setw(10)<<"T"<<setw(10)<<"|"<<setw(10)<<"AT"<<setw(10)<<"|"<<setw(10)<<"BT"<<setw(10)<<"|"<<setw(10)<<"CT"<<setw(10)<<"|"<<setw(10)<<"TAT"<<setw(10)<<"|"<<setw(10)<<"WT"<<setw(10)<<"|"<<endl;
+            cout<<"-------------------------------------------------------------------------------------------------------------------------"<<endl;
             for(int i=0;i<n;i++)
             {
-                cout<<i+1<<setw(10)<<"|"<<setw(10)<<arrival_time[i]<<setw(10)<<"|"<<setw(10)<<burst_time[i]<<setw(10)<<"|"<<setw(10)<<completion_time[i]<<setw(10)<<"|"<<setw(10)<<turn_around_time[i]<<setw(10)<<"|"<<setw(10)<<waiting_time[i]<<setw(10)<<endl;
+                cout<<"|"<<setw(10)<<i+1<<setw(10)<<"|"<<setw(10)<<arrival_time[i]<<setw(10)<<"|"<<setw(10)<<burst_time[i]<<setw(10)<<"|"<<setw(10)<<completion_time[i]<<setw(10)<<"|"<<setw(10)<<turn_around_time[i]<<setw(10)<<"|"<<setw(10)<<waiting_time[i]<<setw(10)<<"|"<<endl;
             }
+            cout<<"-------------------------------------------------------------------------------------------------------------------------"<<endl;
             avg_turn_around_time[0]=0;
             avg_waiting_time[0]=0;
             avg_turn_around_time[0]=float(sum1)/n;
@@ -109,7 +112,7 @@ class Task
             cout<<"Average Turn Around Time : "<<avg_turn_around_time[0]<<endl;
             cout<<"Average Waiting Time     : "<<avg_waiting_time[0]<<endl;
             SetConsoleTextAttribute(hConsole, 5);
-            cout<<"----------------------------------------------------------------------------------------------------------------"<<endl;
+            cout<<"-------------------------------------------------------------------------------------------------------------------------"<<endl;
         }
         void RR(int n)
         {
@@ -172,15 +175,18 @@ class Task
             avg_waiting_time[1]=0;
             avg_turn_around_time[1]=float(sum1)/n;
             avg_waiting_time[1]=float(sum2)/n;
-            cout<<setw(10)<<"T"<<setw(10)<<"|"<<setw(10)<<"AT"<<setw(10)<<"|"<<setw(10)<<"BT"<<setw(10)<<"|"<<setw(10)<<"CT"<<setw(10)<<"|"<<setw(10)<<"TAT"<<setw(10)<<"|"<<setw(10)<<"WT"<<setw(10)<<endl;
+            cout<<"-------------------------------------------------------------------------------------------------------------------------"<<endl;
+            cout<<"|"<<setw(10)<<"T"<<setw(10)<<"|"<<setw(10)<<"AT"<<setw(10)<<"|"<<setw(10)<<"BT"<<setw(10)<<"|"<<setw(10)<<"CT"<<setw(10)<<"|"<<setw(10)<<"TAT"<<setw(10)<<"|"<<setw(10)<<"WT"<<setw(10)<<"|"<<endl;
+            cout<<"-------------------------------------------------------------------------------------------------------------------------"<<endl;
             for(int i=0;i<n;i++)
             {
-                cout<<i+1<<setw(10)<<"|"<<setw(10)<<arrival_time[i]<<setw(10)<<"|"<<setw(10)<<burst_time[i]<<setw(10)<<"|"<<setw(10)<<completion_time[i]<<setw(10)<<"|"<<setw(10)<<turn_around_time[i]<<setw(10)<<"|"<<setw(10)<<waiting_time[i]<<setw(10)<<endl;
+                cout<<"|"<<setw(10)<<i+1<<setw(10)<<"|"<<setw(10)<<arrival_time[i]<<setw(10)<<"|"<<setw(10)<<burst_time[i]<<setw(10)<<"|"<<setw(10)<<completion_time[i]<<setw(10)<<"|"<<setw(10)<<turn_around_time[i]<<setw(10)<<"|"<<setw(10)<<waiting_time[i]<<setw(10)<<"|"<<endl;
             }
+            cout<<"-------------------------------------------------------------------------------------------------------------------------"<<endl;
             cout<<"Average Turn Around Time : "<<avg_turn_around_time[1]<<endl;
             cout<<"Average Waiting Time     : "<<avg_waiting_time[1]<<endl;
             SetConsoleTextAttribute(hConsole, 5);
-            cout<<"----------------------------------------------------------------------------------------------------------------"<<endl;
+            cout<<"-------------------------------------------------------------------------------------------------------------------------"<<endl;
         }
         void SJF(int n)
         {
@@ -252,11 +258,14 @@ class Task
                     }
                 }
             }
-            cout<<setw(10)<<"T"<<setw(10)<<"|"<<setw(10)<<"AT"<<setw(10)<<"|"<<setw(10)<<"BT"<<setw(10)<<"|"<<setw(10)<<"CT"<<setw(10)<<"|"<<setw(10)<<"TAT"<<setw(10)<<"|"<<setw(10)<<"WT"<<setw(10)<<endl;
+            cout<<"-------------------------------------------------------------------------------------------------------------------------"<<endl;
+            cout<<"|"<<setw(10)<<"T"<<setw(10)<<"|"<<setw(10)<<"AT"<<setw(10)<<"|"<<setw(10)<<"BT"<<setw(10)<<"|"<<setw(10)<<"CT"<<setw(10)<<"|"<<setw(10)<<"TAT"<<setw(10)<<"|"<<setw(10)<<"WT"<<setw(10)<<"|"<<endl;
+            cout<<"-------------------------------------------------------------------------------------------------------------------------"<<endl;
             for(int i=0;i<n;i++)
             {
-                cout<<i+1<<setw(10)<<"|"<<setw(10)<<arrival_time[i]<<setw(10)<<"|"<<setw(10)<<burst_time[i]<<setw(10)<<"|"<<setw(10)<<completion_time[i]<<setw(10)<<"|"<<setw(10)<<turn_around_time[i]<<setw(10)<<"|"<<setw(10)<<waiting_time[i]<<setw(10)<<endl;
+                cout<<"|"<<setw(10)<<i+1<<setw(10)<<"|"<<setw(10)<<arrival_time[i]<<setw(10)<<"|"<<setw(10)<<burst_time[i]<<setw(10)<<"|"<<setw(10)<<completion_time[i]<<setw(10)<<"|"<<setw(10)<<turn_around_time[i]<<setw(10)<<"|"<<setw(10)<<waiting_time[i]<<setw(10)<<"|"<<endl;
             }
+            cout<<"-------------------------------------------------------------------------------------------------------------------------"<<endl;
             avg_turn_around_time[2]=0;
             avg_waiting_time[2]=0;
             for(i=0;i<n;i++)
@@ -269,7 +278,7 @@ class Task
             cout<<"Average Turn Around Time : "<<avg_turn_around_time[2]<<endl;
             cout<<"Average Waiting Time : "<<avg_waiting_time[2]<<endl;
             SetConsoleTextAttribute(hConsole, 5);
-            cout<<"----------------------------------------------------------------------------------------------------------------"<<endl;
+            cout<<"-------------------------------------------------------------------------------------------------------------------------"<<endl;
         }
         void PQ(int n)
         {
@@ -346,11 +355,14 @@ class Task
                     }
                 }
             }
-            cout<<setw(10)<<"T"<<setw(10)<<"|"<<setw(10)<<"AT"<<setw(10)<<"|"<<setw(10)<<"BT"<<setw(10)<<"|"<<setw(15)<<"Priority"<<setw(5)<<"|"<<setw(10)<<"CT"<<setw(10)<<"|"<<setw(10)<<"TAT"<<setw(10)<<"|"<<setw(10)<<"WT"<<setw(10)<<endl;
+            cout<<"---------------------------------------------------------------------------------------------------------------------------------------------"<<endl;
+            cout<<"|"<<setw(10)<<"T"<<setw(10)<<"|"<<setw(10)<<"AT"<<setw(10)<<"|"<<setw(10)<<"BT"<<setw(10)<<"|"<<setw(15)<<"Priority"<<setw(5)<<"|"<<setw(10)<<"CT"<<setw(10)<<"|"<<setw(10)<<"TAT"<<setw(10)<<"|"<<setw(10)<<"WT"<<setw(10)<<"|"<<endl;
+            cout<<"---------------------------------------------------------------------------------------------------------------------------------------------"<<endl;
             for(int i=0;i<n;i++)
             {
-                cout<<i+1<<setw(10)<<"|"<<setw(10)<<arrival_time[i]<<setw(10)<<"|"<<setw(10)<<burst_time[i]<<setw(10)<<"|"<<setw(10)<<priority[i]<<setw(10)<<"|"<<setw(10)<<completion_time[i]<<setw(10)<<"|"<<setw(10)<<turn_around_time[i]<<setw(10)<<"|"<<setw(10)<<waiting_time[i]<<setw(10)<<endl;
+                cout<<"|"<<setw(10)<<i+1<<setw(10)<<"|"<<setw(10)<<arrival_time[i]<<setw(10)<<"|"<<setw(10)<<burst_time[i]<<setw(10)<<"|"<<setw(10)<<priority[i]<<setw(10)<<"|"<<setw(10)<<completion_time[i]<<setw(10)<<"|"<<setw(10)<<turn_around_time[i]<<setw(10)<<"|"<<setw(10)<<waiting_time[i]<<setw(10)<<"|"<<endl;
             }
+            cout<<"---------------------------------------------------------------------------------------------------------------------------------------------"<<endl;
             avg_turn_around_time[3]=0;
             avg_waiting_time[3]=0;
             for(i=0;i<n;i++)
@@ -363,20 +375,22 @@ class Task
             cout<<"Average Turn Around Time : "<<avg_turn_around_time[3]<<endl;
             cout<<"Average Waiting Time : "<<avg_waiting_time[3]<<endl;
             SetConsoleTextAttribute(hConsole, 5);
-            cout<<"----------------------------------------------------------------------------------------------------------------"<<endl;
+            cout<<"--------------------------------------------------------------------------------------------------------------------------------------------"<<endl;
         }
         void display()
         {
             cout<<"Comparison Table: "<<endl;
             HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
             SetConsoleTextAttribute(hConsole, 2);
-            cout<<setw(10)<<"Scheduling Alg"<<setw(6)<<"|"<<setw(10)<<"Avg TAT"<<setw(10)<<"|"<<setw(10)<<"Avg WT"<<endl;
-            cout<<setw(10)<<"FIFO"<<setw(10)<<"|"<<setw(10)<<avg_turn_around_time[0]<<setw(10)<<"|"<<setw(10)<<avg_waiting_time[0]<<endl;
-            cout<<setw(10)<<"RR"<<setw(10)<<"|"<<setw(10)<<avg_turn_around_time[1]<<setw(10)<<"|"<<setw(10)<<avg_waiting_time[1]<<endl;
-            cout<<setw(10)<<"SJF"<<setw(10)<<"|"<<setw(10)<<avg_turn_around_time[2]<<setw(10)<<"|"<<setw(10)<<avg_waiting_time[2]<<endl;
-            cout<<setw(10)<<"PQ"<<setw(10)<<"|"<<setw(10)<<avg_turn_around_time[3]<<setw(10)<<"|"<<setw(10)<<avg_waiting_time[3]<<endl;
+            cout<<"------------------------------------------------------------"<<endl;
+            cout<<"|"<<setw(10)<<"Scheduling Alg"<<setw(6)<<"|"<<setw(10)<<"Avg TAT"<<setw(10)<<"|"<<setw(10)<<"Avg WT"<<setw(10)<<"|"<<endl;
+            cout<<"------------------------------------------------------------"<<endl;
+            cout<<"|"<<setw(10)<<"FCFS"<<setw(10)<<"|"<<setw(10)<<avg_turn_around_time[0]<<setw(10)<<"|"<<setw(10)<<avg_waiting_time[0]<<setw(10)<<"|"<<endl;
+            cout<<"|"<<setw(10)<<"RR"<<setw(10)<<"|"<<setw(10)<<avg_turn_around_time[1]<<setw(10)<<"|"<<setw(10)<<avg_waiting_time[1]<<setw(10)<<"|"<<endl;
+            cout<<"|"<<setw(10)<<"SJF"<<setw(10)<<"|"<<setw(10)<<avg_turn_around_time[2]<<setw(10)<<"|"<<setw(10)<<avg_waiting_time[2]<<setw(10)<<"|"<<endl;
+            cout<<"|"<<setw(10)<<"PQ"<<setw(10)<<"|"<<setw(10)<<avg_turn_around_time[3]<<setw(10)<<"|"<<setw(10)<<avg_waiting_time[3]<<setw(10)<<"|"<<endl;
             SetConsoleTextAttribute(hConsole, 5);
-            cout<<"----------------------------------------------------------------------------------------------------------------"<<endl;
+            cout<<"------------------------------------------------------------"<<endl;
         }
         void displaygraph(int n)
         {
