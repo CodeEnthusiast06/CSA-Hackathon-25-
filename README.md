@@ -10,9 +10,13 @@ Problem Description:
 A CPU is responsible for executing multiple tasks (or processes) in a computer system. In a multitasking environment, the CPU scheduler is the component that determines which task will be executed at a given point in time.
 
 Each task has:
+
   •	A burst time (or execution time), which is the amount of time the task requires for the CPU to process it.
+  
   •	A priority (in some algorithms), which indicates the importance of the task.
+  
   •	An arrival time, which specifies when the task arrives in the system.
+  
 The goal of this project is to implement several CPU scheduling algorithms, compare their performance, and determine which one optimizes the CPU's effectiveness based on the specific metrics of interests.
 
 Performance Metrics :
@@ -43,9 +47,13 @@ Comparison: After running simulations for each algorithm, compare their performa
   2.	Which algorithm minimizes Turn around time?
 
 Expected Results:
+
   The output of the simulation will show performance metrics for each algorithm, including:
+  
     o	Average Waiting Time (WT)
+    
     o	Average Turnaround Time (TAT)
+    
   The results will allow you to determine which algorithm performs best in terms of minimizing waiting time, reducing turnaround time.
 
 Conclusion:
